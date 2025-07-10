@@ -1,10 +1,15 @@
 package co.edu.udea.calidad.blazedemo.stepdefinitions;
 
 import co.edu.udea.calidad.blazedemo.tasks.SelectFlightTask;
+import co.edu.udea.calidad.blazedemo.tasks.ChooseFlightTask;
+import co.edu.udea.calidad.blazedemo.tasks.FillPurchaseFormTask;
+import co.edu.udea.calidad.blazedemo.questions.ConfirmationMessage;
 import co.edu.udea.calidad.blazedemo.ui.BlazeDemoPage;
+
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+
 import net.thucydides.core.annotations.Managed;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
@@ -29,11 +34,16 @@ public class BlazeDemoStepDefinitions {
 
     @When("el usuario selecciona {string} como origen y {string} como destino")
     public void elUsuarioSeleccionaOrigenYDestino(String origen, String destino) {
-        actor.attemptsTo(SelectFlightTask.withCities(origen, destino));
+        actor.attemptsTo(
+                SelectFlightTask.withCities(origen, destino),   // Ya la tienes
+                ChooseFlightTask.choose(),                      // Nueva Task: Selecciona vuelo
+                FillPurchaseFormTask.withName("Juan Perez")     // Nueva Task: Llena formulario
+        );
     }
 
     @Then("debe ver notificacion {string}")
     public void debeVerNotificacion(String mensajeEsperado) {
-        assertThat(Text.of(BlazeDemoPage.NOTIFICATION).answeredBy(actor), equalTo(mensajeEsperado));
+        String mensaje = actor.asksFor(ConfirmationMessage.value());  // Nueva Question
+        assertThat(mensaje, equalTo(mensajeEsperado));
     }
 }
