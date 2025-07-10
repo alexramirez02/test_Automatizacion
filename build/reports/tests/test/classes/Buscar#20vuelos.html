@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Buscar vuelos</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Buscar vuelos</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Buscar vuelos</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">2</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">9.990s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+<li>
+<a href="#tab3">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Buscar vuelos entre dos ciudades válidas"></a>
+<h3 class="failures">Buscar vuelos entre dos ciudades válidas</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expected: &quot;Flights from Paris to Buenos Aires&quot;
+     but: was &quot;Flights from Paris to Buenos Aires:&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.debeVerNotificacion(BlazeDemoStepDefinitions.java:37)
+	at ✽.debe ver notificacion &quot;Flights from Paris to Buenos Aires&quot;(file:///home/alex/Documentos/estudio/innosistemas/testAutomatizacion/src/test/resources/features/blazedemo.feature:6)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="No seleccionar ciudad de origen (caso no feliz)"></a>
+<h3 class="failures">No seleccionar ciudad de origen (caso no feliz)</h3>
+<span class="code">
+<pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with text: caracas
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-139-generic', java.version: '17.0.15'
+Driver info: driver.version: unknown
+	at app//org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
+	at app//net.serenitybdd.core.pages.DropdownSelector.lambda$byVisibleText$0(DropdownSelector.java:25)
+	at app//net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:22)
+	at app//net.serenitybdd.core.pages.DropdownSelector.byVisibleText(DropdownSelector.java:22)
+	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.selectByVisibleText(WebElementFacadeImpl.java:850)
+	at app//net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget.performAs(SelectByVisibleTextFromTarget.java:26)
+	at app//net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget$ByteBuddy$epooZDvy.performAs$accessor$g78N81Ve(Unknown Source)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:518)
+	at app//net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:498)
+	at app//net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:472)
+	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:211)
+	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:198)
+	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:86)
+	at app//net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at app//net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget$ByteBuddy$epooZDvy.performAs(Unknown Source)
+	at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:296)
+	at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:275)
+	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at app//co.edu.udea.calidad.blazedemo.tasks.SelectFlightTask.performAs(SelectFlightTask.java:26)
+	at app//co.edu.udea.calidad.blazedemo.tasks.SelectFlightTask$ByteBuddy$ynRf0xdn.performAs$accessor$cUklJvu2(Unknown Source)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.15/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.15/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.15/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:518)
+	at app//net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:498)
+	at app//net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:472)
+	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:211)
+	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:198)
+	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:86)
+	at app//net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at app//co.edu.udea.calidad.blazedemo.tasks.SelectFlightTask$ByteBuddy$ynRf0xdn.performAs(Unknown Source)
+	at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:296)
+	at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:275)
+	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at app//co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioSeleccionaOrigenYDestino(BlazeDemoStepDefinitions.java:32)
+	at ✽.el usuario selecciona &quot;caracas&quot; como origen y &quot;Buenos Aires&quot; como destino(file:///home/alex/Documentos/estudio/innosistemas/testAutomatizacion/src/test/resources/features/blazedemo.feature:10)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Buscar vuelos entre dos ciudades válidas</td>
+<td class="failures">7.208s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">No seleccionar ciudad de origen (caso no feliz)</td>
+<td class="failures">2.782s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+Scenario: Buscar vuelos entre dos ciudades válidas                             ?[90m# src/test/resources/features/blazedemo.feature:3?[0m
+  ?[32mGiven ?[0m?[32mel usuario accede a la pagina de vuelos?[0m                                ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioAccedeAPaginaDeVuelos()?[0m
+  ?[32mWhen ?[0m?[32mel usuario selecciona ?[0m?[32m?[1m&quot;Paris&quot;?[0m?[32m como origen y ?[0m?[32m?[1m&quot;Buenos Aires&quot;?[0m?[32m como destino?[0m ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioSeleccionaOrigenYDestino(java.lang.String,java.lang.String)?[0m
+  ?[31mThen ?[0m?[31mdebe ver notificacion ?[0m?[31m?[1m&quot;Flights from Paris to Buenos Aires&quot;?[0m              ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.debeVerNotificacion(java.lang.String)?[0m
+      ?[31mjava.lang.AssertionError: 
+Expected: &quot;Flights from Paris to Buenos Aires&quot;
+     but: was &quot;Flights from Paris to Buenos Aires:&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+	at co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.debeVerNotificacion(BlazeDemoStepDefinitions.java:37)
+	at ✽.debe ver notificacion &quot;Flights from Paris to Buenos Aires&quot;(file:///home/alex/Documentos/estudio/innosistemas/testAutomatizacion/src/test/resources/features/blazedemo.feature:6)
+?[0m
+
+Scenario: No seleccionar ciudad de origen (caso no feliz)                        ?[90m# src/test/resources/features/blazedemo.feature:8?[0m
+  ?[32mGiven ?[0m?[32mel usuario accede a la pagina de vuelos?[0m                                  ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioAccedeAPaginaDeVuelos()?[0m
+  ?[31mWhen ?[0m?[31mel usuario selecciona ?[0m?[31m?[1m&quot;caracas&quot;?[0m?[31m como origen y ?[0m?[31m?[1m&quot;Buenos Aires&quot;?[0m?[31m como destino?[0m ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioSeleccionaOrigenYDestino(java.lang.String,java.lang.String)?[0m
+      ?[31morg.openqa.selenium.NoSuchElementException: Cannot locate option with text: caracas
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-139-generic', java.version: '17.0.15'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:153)
+	at net.serenitybdd.core.pages.DropdownSelector.lambda$byVisibleText$0(DropdownSelector.java:25)
+	at net.serenitybdd.core.pages.WithRetries.perform(WithRetries.java:22)
+	at net.serenitybdd.core.pages.DropdownSelector.byVisibleText(DropdownSelector.java:22)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.selectByVisibleText(WebElementFacadeImpl.java:850)
+	at net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget.performAs(SelectByVisibleTextFromTarget.java:26)
+	at net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget$ByteBuddy$epooZDvy.performAs$accessor$g78N81Ve(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:518)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:498)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:472)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:211)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:198)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:86)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at net.serenitybdd.screenplay.actions.selectactions.SelectByVisibleTextFromTarget$ByteBuddy$epooZDvy.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:296)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:275)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at co.edu.udea.calidad.blazedemo.tasks.SelectFlightTask.performAs(SelectFlightTask.java:26)
+	at co.edu.udea.calidad.blazedemo.tasks.SelectFlightTask$ByteBuddy$ynRf0xdn.performAs$accessor$cUklJvu2(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:518)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:498)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:472)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:211)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:198)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:86)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at co.edu.udea.calidad.blazedemo.tasks.SelectFlightTask$ByteBuddy$ynRf0xdn.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:296)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:275)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioSeleccionaOrigenYDestino(BlazeDemoStepDefinitions.java:32)
+	at ✽.el usuario selecciona &quot;caracas&quot; como origen y &quot;Buenos Aires&quot; como destino(file:///home/alex/Documentos/estudio/innosistemas/testAutomatizacion/src/test/resources/features/blazedemo.feature:10)
+?[0m
+  ?[36mThen ?[0m?[36mdebe ver notificacion ?[0m?[36m?[1m&quot;Datos faltantes&quot;?[0m                                   ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.debeVerNotificacion(java.lang.String)?[0m
+</pre>
+</span>
+</div>
+<div id="tab3" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///home/alex/Documentos/estudio/innosistemas/testAutomatizacion/src/test/resources/features/blazedemo.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Buscar vuelos entre dos ciudades válidas(buscar-vuelos;buscar-vuelos-entre-dos-ciudades-válidas)
+--------------------------------------------------------------------------------
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.DriverProvider - Using WebDriverManager configuration for chrome
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 138.0.7204.94 (resolved driver for Chrome 138)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/alex/.cache/selenium/chromedriver/linux64/138.0.7204.94/chromedriver
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
+Starting ChromeDriver 138.0.7204.94 (5450257488848fa5bab09dea663ce77edfb17672-refs/branch-heads/7204_50@{#10}) on port 5476
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 5476.
+jul. 10, 2025 2:16:57 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ADVERTENCIA: Unable to find CDP implementation matching 138
+jul. 10, 2025 2:16:57 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.8.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[Test worker] ERROR  - ?[91m
+  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+ |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+
+Buscar vuelos entre dos ciudades válidas
+-----------------------------------------------------------------------?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: Then debe ver notificacion &quot;Flights from Paris to Buenos Aires&quot;?[0m
+[Test worker] ERROR  - ?[91m    Expected: &quot;Flights from Paris to Buenos Aires&quot; but: was &quot;Flights from Paris to Buenos Aires:&quot;?[0m
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///home/alex/Documentos/estudio/innosistemas/testAutomatizacion/src/test/resources/features/blazedemo.feature
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+No seleccionar ciudad de origen (caso no feliz)(buscar-vuelos;no-seleccionar-ciudad-de-origen-(caso-no-feliz))
+--------------------------------------------------------------------------------
+[Test worker] ERROR  - ?[91m
+  _____   ___   ___   _____     ___   ___   ___    ___    ___ 
+ |_   _| | __| / __| |_   _|   | __| | _ \ | _ \  / _ \  | _ \
+   | |   | _|  \__ \   | |     | _|  |   / |   / | (_) | |   /
+   |_|   |___| |___/   |_|     |___| |_|_\ |_|_\  \___/  |_|_\
+
+No seleccionar ciudad de origen (caso no feliz)
+---------------------------------------------------------------?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: Usuario selects caracas on Ciudad de origen?[0m
+[Test worker] ERROR  - ?[91m    Cannot locate option with text: caracas?[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 10/07/2025, 2:17:06 p. m.</p>
+</div>
+</div>
+</body>
+</html>

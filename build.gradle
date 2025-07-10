@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+}
+
+group = 'co.edu.udea.calidad'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    serenityVersion = '3.6.12'
+    lombokVersion = '1.18.22'
+    junitVersion = '4.13.2'
+    hamcrestVersion = '1.3'
+    webdriverManagerVersion = '5.4.1'
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$serenityVersion"
+
+    testImplementation "net.serenity-bdd:serenity-cucumber:$serenityVersion"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.hamcrest:hamcrest-all:$hamcrestVersion"
+
+    implementation "io.github.bonigarcia:webdrivermanager:$webdriverManagerVersion"
+
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    implementation 'org.slf4j:slf4j-simple:2.0.5'
+    // Para que @Managed funcione
+    testImplementation "net.serenity-bdd:serenity-junit:$serenityVersion"
+
+
+
+}
+
+test {
+    useJUnit()
+}

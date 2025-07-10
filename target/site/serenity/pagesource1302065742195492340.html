@@ -1,0 +1,84 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="en"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;title&gt; BlazeDemo&lt;/title&gt; <br/>
+  &lt;meta name="description" content="BlazeMeter demo app"&gt; <br/>
+  &lt;meta name="sage" content="flights app"&gt; <br/>
+  &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="/assets/bootstrap.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="/assets/bootstrap-table.js"&gt;&lt;/script&gt; <br/>
+  &lt;link href="/assets/bootstrap.min.css" rel="stylesheet" media="screen"&gt; <br/>
+  &lt;link href="/assets/bootstrap-table.css" rel="stylesheet" media="screen"&gt; <br/>
+  &lt;style type="text/css"&gt;<br/>
+        body {<br/>
+            background: #f5f5f5);<br/>
+        }<br/>
+<br/>
+        .hero-unit {<br/>
+            background-color: #fff;<br/>
+        }<br/>
+<br/>
+        .center {<br/>
+            display: block;<br/>
+            margin: 0 auto;<br/>
+        }<br/>
+    &lt;/style&gt; <br/>
+  &lt;script async src="https://blazemeter.trackinglibrary.prodperfect.com/keen-tracking.min.js"&gt;&lt;/script&gt;<br/>
+ &lt;/head&gt; <br/>
+ &lt;body&gt; <br/>
+  &lt;div class="navbar navbar-inverse"&gt; <br/>
+   &lt;div class="navbar-inner"&gt; <br/>
+    &lt;div class="container"&gt; &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt; &lt;span class="icon-bar"&gt;&lt;/span&gt; &lt;span class="icon-bar"&gt;&lt;/span&gt; &lt;span class="icon-bar"&gt;&lt;/span&gt; &lt;/a&gt; &lt;a class="brand" href="index.php"&gt;Travel The World&lt;/a&gt; &lt;a class="brand" href="home"&gt;home&lt;/a&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div class="jumbotron"&gt; <br/>
+   &lt;div class="container"&gt; <br/>
+    &lt;h1&gt;Welcome to the Simple Travel Agency!&lt;/h1&gt; <br/>
+    &lt;p&gt;The is a sample site you can test with BlazeMeter! &lt;/p&gt; <br/>
+    &lt;p&gt;Check out our &lt;a href="vacation.html"&gt;destination of the week! The Beach!&lt;/a&gt;&lt;/p&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/div&gt; <br/>
+  &lt;div class="container"&gt; <br/>
+   &lt;h2&gt;Choose your departure city:&lt;/h2&gt; <br/>
+   &lt;form action="reserve.php" method="post"&gt; &lt;select name="fromPort" class="form-inline"&gt; &lt;option value="Paris"&gt;Paris&lt;/option&gt; &lt;option value="Philadelphia"&gt;Philadelphia&lt;/option&gt; &lt;option value="Boston"&gt;Boston&lt;/option&gt; &lt;option value="Portland"&gt;Portland&lt;/option&gt; &lt;option value="San Diego"&gt;San Diego&lt;/option&gt; &lt;option value="Mexico City"&gt;Mexico City&lt;/option&gt; &lt;option value="São Paolo"&gt;São Paolo&lt;/option&gt; &lt;/select&gt; <br/>
+    &lt;p&gt; &lt;/p&gt;<br/>
+    &lt;h2&gt;Choose your destination city:&lt;/h2&gt; &lt;select name="toPort" class="form-inline"&gt; &lt;option value="Buenos Aires"&gt;Buenos Aires&lt;/option&gt; &lt;option value="Rome"&gt;Rome&lt;/option&gt; &lt;option value="London"&gt;London&lt;/option&gt; &lt;option value="Berlin"&gt;Berlin&lt;/option&gt; &lt;option value="New York"&gt;New York&lt;/option&gt; &lt;option value="Dublin"&gt;Dublin&lt;/option&gt; &lt;option value="Cairo"&gt;Cairo&lt;/option&gt; &lt;/select&gt; <br/>
+    &lt;p&gt;&lt;/p&gt; <br/>
+    &lt;div class="container"&gt; <br/>
+     &lt;input type="submit" class="btn btn-primary" value="Find Flights"&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/form&gt; <br/>
+  &lt;/div&gt; &lt;!-- ProdPerfect script: last thing before the body closes --&gt; <br/>
+  &lt;script&gt;<br/>
+!function(name,path,ctx){<br/>
+    var latest,prev=name!=='Keen'&&window.Keen?window.Keen:false;ctx[name]=ctx[name]||{ready:function(fn){var h=document.getElementsByTagName('head')[0],s=document.createElement('script'),w=window,loaded;s.onload=s.onreadystatechange=function(){if((s.readyState&&!(/^c|loade/.test(s.readyState)))||loaded){return}s.onload=s.onreadystatechange=null;loaded=1;latest=w.Keen;if(prev){w.Keen=prev}else{try{delete w.Keen}catch(e){w.Keen=void 0}}ctx[name]=latest;ctx[name].ready(fn)};s.async=1;s.src=path;h.appendChild(s)}}<br/>
+  }('ProdPerfectKeen','https://blazemeter.trackinglibrary.prodperfect.com/keen-tracking.min.js',this);<br/>
+<br/>
+  ProdPerfectKeen.ready(function () {<br/>
+    var client = new ProdPerfectKeen({<br/>
+      projectId: "lXviifSA1NskA4wsG9N6WoWg",<br/>
+      writeKey: "8RWMCGFX4X0IRY1GHWDM3HM5WDSJF9LP62BSDULOL3XK7WAIFGDB7EU526O1A0UPLH1S8SJP320LUXJKCHLJX1822GU1KFE80CNW6PXVZ83IOO6LJ731EN164IFVUFMC8DOGYP2MXHN47WGVB192F2PTQRQXCF95OJWAKGOH9S69DZAI5OPJW8QSPDE6LQQ9",<br/>
+      requestType: "beacon",<br/>
+      host: "blazemeter.datapipe.prodperfect.com/v1",<br/>
+    });<br/>
+    client.extendEvents({<br/>
+      visitor: {<br/>
+        user_id: null,<br/>
+      },<br/>
+    });<br/>
+<br/>
+    var options = {<br/>
+      ignoreDisabledFormFields: false,<br/>
+      recordClicks: true,<br/>
+      recordFormSubmits: true,<br/>
+      recordInputChanges: true,<br/>
+      recordPageViews: true,<br/>
+      recordPageUnloads: true,<br/>
+      recordScrollState: true,<br/>
+    };<br/>
+    client.initAutoTracking(options);<br/>
+  });<br/>
+&lt;/script&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
