@@ -1,11 +1,14 @@
 package co.edu.udea.calidad.blazedemo.tasks;
 
-import co.edu.udea.calidad.blazedemo.interactions.ClickButtonAction;
-import co.edu.udea.calidad.blazedemo.ui.BlazeDemoPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.Tasks;
-import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectFlightTask implements Task {
 
@@ -18,15 +21,37 @@ public class SelectFlightTask implements Task {
     }
 
     public static SelectFlightTask withCities(String origen, String destino) {
-        return Tasks.instrumented(SelectFlightTask.class, origen, destino);
+        return instrumented(SelectFlightTask.class, origen, destino);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                SelectFromOptions.byVisibleText(origen).from(BlazeDemoPage.FROM_CITY),
-                SelectFromOptions.byVisibleText(destino).from(BlazeDemoPage.TO_CITY),
-                ClickButtonAction.on(BlazeDemoPage.FIND_FLIGHTS_BUTTON)
-        );
+        WebDriver driver = BrowseTheWeb.as(actor).getDriver();
+
+        boolean origenValido = true;
+        boolean destinoValido = true;
+
+        try {
+            Select selectOrigen = new Select(driver.findElement(By.name("fromPort")));
+            selectOrigen.selectByVisibleText(origen);
+        } catch (NoSuchElementException e) {
+            origenValido = false;
+        }
+
+        try {
+            Select selectDestino = new Select(driver.findElement(By.name("toPort")));
+            selectDestino.selectByVisibleText(destino);
+        } catch (NoSuchElementException e) {
+            destinoValido = false;
+        }
+
+        boolean datosInvalidos = !(origenValido && destinoValido);
+        actor.remember("datosInvalidos", datosInvalidos);
+
+        if (!datosInvalidos) {
+            driver.findElement(By.cssSelector("input[type='submit']")).click();
+        } else {
+            System.out.println("No se puede continuar: Datos faltantes o incorrectos.");
+        }
     }
 }
