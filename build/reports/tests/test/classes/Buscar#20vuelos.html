@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">12.689s</div>
+<div class="counter">25.633s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,12 +82,12 @@
 </thead>
 <tr>
 <td class="success">Buscar vuelos entre dos ciudades válidas</td>
-<td class="success">12.112s</td>
+<td class="success">20.280s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">No seleccionar ciudad de origen (caso no feliz)</td>
-<td class="success">0.577s</td>
+<td class="success">5.353s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -98,22 +98,25 @@
 <pre>
 Scenario: Buscar vuelos entre dos ciudades válidas                             ?[90m# src/test/resources/features/blazedemo.feature:3?[0m
   ?[32mGiven ?[0m?[32mel usuario accede a la pagina de vuelos?[0m                                ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioAccedeAPaginaDeVuelos()?[0m
-Mensaje real capturado en el @When: 'Thank you for your purchase today!'
+CASO FELIZ: Origen: Paris → Destino: Buenos Aires
+Mensaje real capturado en @When: 'Thank you for your purchase today!'
   ?[32mWhen ?[0m?[32mel usuario selecciona ?[0m?[32m?[1m&quot;Paris&quot;?[0m?[32m como origen y ?[0m?[32m?[1m&quot;Buenos Aires&quot;?[0m?[32m como destino?[0m ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioSeleccionaOrigenYDestino(java.lang.String,java.lang.String)?[0m
 URL actual: https://blazedemo.com/confirmation.php
 Mensaje esperado: 'Thank you for your purchase today!'
 Datos inválidos: false
 Mensaje real desde la página: 'Thank you for your purchase today!'
   ?[32mThen ?[0m?[32mdebe ver notificacion ?[0m?[32m?[1m&quot;Thank you for your purchase today!&quot;?[0m              ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.debeVerNotificacion(java.lang.String)?[0m
+TEST PASÓ (CASO FELIZ: flujo completo con mensaje de confirmación)
 
 Scenario: No seleccionar ciudad de origen (caso no feliz)                        ?[90m# src/test/resources/features/blazedemo.feature:10?[0m
   ?[32mGiven ?[0m?[32mel usuario accede a la pagina de vuelos?[0m                                  ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioAccedeAPaginaDeVuelos()?[0m
-Origen o destino no disponible: Caracas → Buenos Aires
+CASO NO FELIZ: Origen o destino no disponible → Origen: Caracas → Destino: Buenos Aires
   ?[32mWhen ?[0m?[32mel usuario selecciona ?[0m?[32m?[1m&quot;Caracas&quot;?[0m?[32m como origen y ?[0m?[32m?[1m&quot;Buenos Aires&quot;?[0m?[32m como destino?[0m ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.elUsuarioSeleccionaOrigenYDestino(java.lang.String,java.lang.String)?[0m
 URL actual: https://blazedemo.com/
 Mensaje esperado: 'Datos faltantes'
 Datos inválidos: true
   ?[32mThen ?[0m?[32mdebe ver notificacion ?[0m?[32m?[1m&quot;Datos faltantes&quot;?[0m                                   ?[90m# co.edu.udea.calidad.blazedemo.stepdefinitions.BlazeDemoStepDefinitions.debeVerNotificacion(java.lang.String)?[0m
+TEST PASÓ (CASO NO FELIZ: validación correcta de datos inválidos)
 </pre>
 </span>
 </div>
@@ -134,13 +137,13 @@ Buscar vuelos entre dos ciudades válidas(buscar-vuelos;buscar-vuelos-entre-dos-
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /home/alex/.cache/selenium/chromedriver/linux64/138.0.7204.94/chromedriver
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \n                   --disa..., --disable-default-apps, --disable-extensions-file-a..., \n                   --inco..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
-Starting ChromeDriver 138.0.7204.94 (5450257488848fa5bab09dea663ce77edfb17672-refs/branch-heads/7204_50@{#10}) on port 1980
+Starting ChromeDriver 138.0.7204.94 (5450257488848fa5bab09dea663ce77edfb17672-refs/branch-heads/7204_50@{#10}) on port 14511
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully on port 1980.
-jul. 11, 2025 12:44:46 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+ChromeDriver was started successfully on port 14511.
+jul. 11, 2025 6:08:17 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find CDP implementation matching 138
-jul. 11, 2025 12:44:47 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+jul. 11, 2025 6:08:17 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 ADVERTENCIA: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.8.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO  - ?[92m
   _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
@@ -178,7 +181,7 @@ No seleccionar ciudad de origen (caso no feliz)
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at 11/07/2025, 12:44:59 a. m.</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at 11/07/2025, 6:08:38 p. m.</p>
 </div>
 </div>
 </body>
